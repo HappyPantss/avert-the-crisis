@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #140433;
+}
+
+
+/* img {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    border-radius: 100%;
+    background: red;
+    transition: height 0.5s;
+    transition: width 0.5s;
+    transition: border-radius 1s, box-shadow 1s, background 1s;
+    line-height: 75px;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    box-shadow: 0;
+} */
+
+img:hover {
+    border-radius: 0%;
+    box-shadow: 0px 8px 6px -4px #000000;
+    background: #DDD;
+    transition: border-radius 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.slide {
+    height: 100vh;
+    background-size: auto 100vh;
+    background-repeat: repeat-x;
+    width: 500vw;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 500vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+.outer-wrapper {
+    width: 500vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+ ::-webkit-scrollbar {
+    display: none;
+}
+
+circle {
+    fill: steelblue;
+}
+
+.line-path {
+    fill: none;
+    stroke: #EEECDD;
+    stroke-width: 5;
+    stroke-linejoin: round;
+}
+
+
+/* @media (prefers-color-scheme: dark) {} */
+
+
+/* TEST SCROLLTRIGGER */
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    color: white;
+    font-family: fantasy;
+    font-size: 2rem;
+}
+
+.a {
+    background-color: purple;
+}
+
+.b {
+    background-color: rgb(4, 128, 0);
+}
+
+.c {
+    background-color: rgb(54, 148, 192);
+}
+
+
+/* GRAPH */
+
+text {
+    font-family: sans-serif;
+}
+
+.tick text {
+    font-size: 3rem;
+    fill: #55586A;
+    opacity: 50%;
+}
+
+.tick line {
+    stroke: #352E4E;
+    stroke-width: 0.2rem;
+}
+
+.data-circle {
+    fill: red;
+}
+
+
+/* .data-circle:nth-child(50) {
+    fill: green;
+} */
+
+
+/* .data-circle:active {
+    fill: blue;
+    stroke: pink;
+    stroke-width: 10px;
+} */
+
+
+/* .axis-label {
+    font-size: 5em;
+    fill: #8E8883;
+} */
+
+
+/* .title {
+    font-size: 3.7em;
+    fill: #635F5D;
+} */
+
+section {
+    height: 100vh;
+}
+
+ul li {
+    width: 3rem;
+    color: #352E4E;
+    margin-top: 1.3rem;
+    margin-left: 2rem;
+    list-style: none;
+}
+
+figcaption {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 600;
+    font-size: 5rem;
+    font-style: italic;
+    color: #55586A;
+    display: block;
+    text-decoration: none;
+    margin-bottom: -2rem;
+    text-align: left;
+    line-height: 6.5rem;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12rem;
+    font-style: italic;
+    color: #EEECDD;
+    text-align: left;
+    line-height: 9rem;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+h2 {
+    font-size: 10rem;
+    font-family: 'Manrope', sans-serif;
+    line-height: 8rem;
+    letter-spacing: -0.025em;
+    color: #EEECDD;
+    word-break: break-word;
+    width: 50rem;
+    text-align: left;
+    vertical-align: middle;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+div img {
+    height: 40px;
+    margin: 0 auto;
+    margin-left: -4rem;
+}
+
+.wrap img {
+    line-height: 60px;
+    position: absolute;
+    bottom: 50px;
+}
+
+.bounce {
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation: bounce 3.6s ease infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    5.55556% {
+        transform: translateY(0);
+    }
+    11.11111% {
+        transform: translateY(0);
+    }
+    22.22222% {
+        transform: translateY(-15px);
+    }
+    27.77778% {
+        transform: translateY(0);
+    }
+    33.33333% {
+        transform: translateY(-15px);
+    }
+    44.44444% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

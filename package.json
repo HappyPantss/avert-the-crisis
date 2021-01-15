@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "py -m http.server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/HappyPantss/avert-the-crisis/issues"
   },
-  "homepage": "https://github.com/HappyPantss/avert-the-crisis#readme"
+  "homepage": "https://github.com/HappyPantss/avert-the-crisis#readme",
+  "dependencies": {
+    "gsap": "^3.6.0"
+  }
 }
