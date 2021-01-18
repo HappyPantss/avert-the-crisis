@@ -10,7 +10,7 @@ body {
 section {
     height: 100vh;
     width: 100%;
-    background-color: #140433;
+    background-color: #171b26;
 }
 
 .slideHero {
@@ -79,7 +79,7 @@ h2 {
 }
 
 h3 {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-family: 'Manrope', sans-serif;
     color: #EEECDD;
     text-align: center;
@@ -141,9 +141,161 @@ div img {
 
 /* GRAPH */
 
+.events {
+    display: flex;
+    font-family: 'Manrope', sans-serif;
+    color: #EEECDD;
+}
+
+.event {
+    width: 15rem;
+    bottom: 10px;
+    position: absolute;
+}
+
+.event img {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto;
+}
+
+.vl {
+    border-left: 6px solid #17a1cd;
+    margin-left: 2.3rem;
+    /* height: 75px; */
+}
+
+.event p {
+    font-size: 20px;
+}
+
+.one {
+    margin-left: 13.7rem;
+}
+
+.two {
+    margin-left: 21rem;
+}
+
+.three {
+    margin-left: 30.25rem;
+}
+
+.four {
+    margin-left: 35.7rem;
+}
+
+.five {
+    margin-left: 41.3rem;
+}
+
+.six {
+    margin-left: 46.7rem;
+}
+
+.seven {
+    margin-left: 52.3rem;
+}
+
+.eight {
+    margin-left: 67rem;
+}
+
+.nine {
+    margin-left: 85.3rem;
+}
+
+.ten {
+    margin-left: 125.7rem;
+}
+
+.eleven {
+    margin-left: 131.2rem;
+}
+
+.twelve {
+    margin-left: 144.1rem;
+}
+
+.thirteen {
+    margin-left: 156.9rem;
+}
+
+.fourteen {
+    margin-left: 195.55rem;
+}
+
+.fifteen {
+    margin-left: 195.55rem;
+}
+
+.sixteen {
+    margin-left: 232.3rem;
+}
+
+.seventeen {
+    margin-left: 250.7rem;
+}
+
+.eighteen {
+    margin-left: 296.6rem;
+}
+
+.nineteen {
+    margin-left: 315rem;
+}
+
+.twenty {
+    margin-left: 315rem;
+}
+
+.twentyone {
+    margin-left: 403.2rem;
+}
+
+.twentytwo {
+    margin-left: 405rem;
+}
+
+.twentythree {
+    margin-left: 423.4rem;
+}
+
+.twentyfour {
+    margin-left: 430.75rem;
+}
+
+.twentyfive {
+    margin-left: 443.6rem;
+}
+
+.twentysix {
+    margin-left: 486rem;
+}
+
+.twentyseven {
+    margin-left: 531.95rem;
+}
+
+.twentyeight {
+    margin-left: 555.8rem;
+}
+
+.twentynine {
+    margin-left: 577.9rem;
+}
+
+#sepYAxis {
+    margin-top: -82px;
+}
+
+#sepYAxis .linepath {
+    stroke: transparent;
+}
+
 .line-path {
     fill: none;
-    stroke: #EEECDD;
+    stroke: #17a1cd;
     stroke-width: 5;
     stroke-linejoin: round;
 }
@@ -152,14 +304,20 @@ text {
     font-family: sans-serif;
 }
 
-.tick text {
+#svgMain .tick text {
     font-size: 3rem;
-    fill: transparent;
+    fill: #ccc;
+    opacity: 50%;
+}
+
+#sepYAxis .tick text {
+    font-size: 3rem;
+    fill: #ccc;
     opacity: 50%;
 }
 
 .tick line {
-    stroke: transparent;
+    stroke: #ccc;
     stroke-width: 0.2rem;
 }
 
