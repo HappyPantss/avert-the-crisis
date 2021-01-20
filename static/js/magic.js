@@ -1,12 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
 var slides = document.querySelectorAll(".rowWrap");
 
 var action = gsap.timeline({
         scrollTrigger: {
-            trigger: "#sec02",
-            endTrigger: ".bg_black",
+            trigger: "#sec01",
+            endTrigger: "#sec02",
             pin: true,
             scrub: 0.3,
             start: "top top",

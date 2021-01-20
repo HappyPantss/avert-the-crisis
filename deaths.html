@@ -10,26 +10,9 @@
 </head>
 
 <body>
-    <section>
-        <nav>
-            <ul>
-                <li>
-                    <a href="https://www.cbs.nl/nl-nl/dossier/cbs-cijfers-coronacrisis"><img src="static/img/cbs.svg" alt="logo"></a>
-                    <li>
-            </ul>
-        </nav>
-
-        <figcaption>2020</figcaption>
-        <h1>de tijd</h1>
-        <h2>van corona</h2>
-
-        <div class="wrap">
-            <img src="static/img/arrow.svg" id="arrow" class="bounce">
-        </div>
-    </section>
     <section id="sec01">
         <div class="container">
-            <h3>Aantal positief geteste personen per dag</h3>
+            <h3>Aantal sterfgevallen per dag</h3>
             <svg id="yMain" width="1920" height="1000"></svg>
             <div class="rowWrap">
                 <div class="outer-wrapper">
@@ -270,13 +253,13 @@
                                         <p>Eerste vaccins komen aan in Nederland.</p>
                                     </div>
                                 </div>
-                                <a href="deaths.html">
+                                <a href="index.html">
                                     <div class="event thirty">
                                         <div>
                                             <img src="static/img/heart.png" class="circular--square">
                                         </div>
                                         <div class="infoEvent">
-                                            <p>Bekijk het aantal sterfgevallen</p>
+                                            <p>Bekijk het aantal positief geteste personen</p>
                                             <p>hier.</p>
                                         </div>
                                     </div>
@@ -295,8 +278,8 @@
 
     <script src="static/js/magic.js"></script>
 
-    <script src="static/js/infected/bundle.js"></script>
-    <script src="static/js/infected/axis.js"></script>
+    <script src="static/js/deaths/bundle.js"></script>
+    <script src="static/js/deaths/axis.js"></script>
     <script>
         let info = document.getElementsByClassName("event");
         for (let i = 0; i < info.length; i++) {
