@@ -1,7 +1,7 @@
 (function(d3) {
     'use strict';
 
-    const svg = d3.select('#sepYAxis');
+    const svg = d3.select('#svgMain');
 
     const width = +svg.attr('width');
     const height = +svg.attr('height');
@@ -29,38 +29,21 @@
             .attr('transform', `translate(${margin.left},${margin.top})`);
 
         const xAxis = d3.axisBottom(xScale)
-            .ticks(0)
-            .tickSize(-innerHeight)
+            // .tickSize(-innerHeight)
             .tickPadding(-500);
 
         const yAxis = d3.axisLeft(yScale)
-            .ticks(6)
-            .tickSize(-innerWidth) // Horizontal lines
+            .ticks(0)
+            // .tickSize(-innerWidth) // Horizontal lines
             .tickPadding(10);
 
         const yAxisG = g.append('g').call(yAxis);
         yAxisG.selectAll('.domain').remove();
 
-        yAxisG.append('text')
-            .attr('class', 'axis-label')
-            .attr('y', -60)
-            .attr('x', -innerHeight / 2)
-            .attr('fill', 'black')
-            .attr('transform', `rotate(-90)`)
-            .attr('text-anchor', 'middle');
-        // .text(yAxisLabel);
-
         const xAxisG = g.append('g').call(xAxis)
             .attr('transform', `translate(0,${innerHeight})`);
 
         xAxisG.select('.domain').remove();
-
-        xAxisG.append('text')
-            .attr('class', 'axis-label')
-            .attr('y', 80)
-            .attr('x', innerWidth / 2)
-            .attr('fill', 'black')
-            .text(xAxisLabel);
 
         const lineGenerator = d3.line()
             .x(d => xScale(xValue(d)))
@@ -68,7 +51,7 @@
             .curve(d3.curveBasis);
 
         g.append('path')
-            .attr('class', 'line-path')
+            .attr('class', 'line-path2')
             .attr('d', lineGenerator(data));
 
         g.selectAll('circle').data(data)

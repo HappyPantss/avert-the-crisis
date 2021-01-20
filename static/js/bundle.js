@@ -9,9 +9,10 @@
     const render = data => {
 
         const xValue = d => d.date;
-        const xAxisLabel = 'Datum';
 
-        const yValue = d => d.infected;
+        const yValue = d => d.deathsTotal;
+
+        const zValue = d => d.infected;
 
         const margin = { top: 150, right: 50, bottom: 300, left: 200 };
         const innerWidth = width - margin.left - margin.right;
@@ -31,7 +32,7 @@
 
         const xAxis = d3.axisBottom(xScale)
             .tickSize(-innerHeight)
-            .tickPadding(-500);
+            .tickPadding(-483);
 
         const yAxis = d3.axisLeft(yScale)
             .ticks(0)
@@ -44,23 +45,42 @@
         const xAxisG = g.append('g').call(xAxis)
             .attr('transform', `translate(0,${innerHeight})`);
 
-        xAxisG.select('.domain').remove();
+        xAxisG.selectAll('.domain').remove();
 
         const lineGenerator = d3.line()
             .x(d => xScale(xValue(d)))
             .y(d => yScale(yValue(d)))
             .curve(d3.curveBasis);
 
+        const lineGenerator2 = d3.line()
+            .x(d => xScale(xValue(d)))
+            .y(d => yScale(zValue(d)))
+            .curve(d3.curveBasis);
+
         g.append('path')
             .attr('class', 'line-path')
             .attr('d', lineGenerator(data));
 
-        g.selectAll('circle').data(data)
-            .enter().append('circle')
-            .attr('class', 'data-circle')
+        g.append('path')
+            .attr('class', 'line-path2')
+            .attr('d', lineGenerator2(data));
+
+        g.selectAll('circle')
+            .data(data)
+            .enter()
+            .append('circle')
+            .attr('r', 5)
             .attr('cy', d => yScale(yValue(d)))
             .attr('cx', d => xScale(xValue(d)))
-            .attr('r', 10)
+            .attr('fill', 'transparent');
+
+        g.selectAll('circle2').data(data)
+            .enter().append('circle')
+            .attr('class', 'data-circle')
+            .attr('cy', d => yScale(zValue(d)))
+            .attr('cx', d => xScale(xValue(d)))
+            .attr('fill', 'transparent')
+            .attr('r', 5);
     };
 
     d3.csv('static/js/data.csv')
