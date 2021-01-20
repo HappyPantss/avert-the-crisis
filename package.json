@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/HappyPantss/avert-the-crisis.git"
   },
-  "author": "",
+  "author": "Sergio Eijben",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/HappyPantss/avert-the-crisis/issues"
@@ -19,5 +19,6 @@
   "homepage": "https://github.com/HappyPantss/avert-the-crisis#readme",
   "dependencies": {
     "gsap": "^3.6.0"
-  }
+  },
+  "devDependencies": {}
 }
