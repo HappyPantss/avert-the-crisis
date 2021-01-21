@@ -10,6 +10,9 @@ Het probleem is dat de huidige website over de coronacrisis niet aansturend en i
 De voorwaarden van deze opdracht zijn om een geschikt interactief middel te bedenken dat user-centered is, prikkelend en duidelijk is. Een paar technische eisen zijn om de navigatie kritisch te bepalen, bedenken wat de ervaring kan zijn. En in welke vorm wij de doelgroep aanspreken. Met als hoofdgedachte een begrijpelijk, intrigerend prototype te ontwikkelen.
 Aan ons de taak om dit te realiseren, ons voorstel is om een dashboard te gebruiken waarin wij alle informatie organiseren om de doelgroep beter te kunnen dienen. Wij willen dat bereiken door onderzoek te doen, en kijken in welke vorm hun ervaring aanzienlijk verbeterd kan worden en hen te activeren en informeren. Wij zijn enthousiast over dit project en zouden graag regelmatig met jullie onze ideeën bespreken.
 
+# Wat is niet gelukt?
+Ik wilde graag werken met Vue, en dit gebruiken om de technische opzet wat makkelijker te maken. Hiermee had ik functionaliteiten kunnen splitsen, en de folders beter kunnen indelen. Helaas is dit aan het begin niet gelukt na heel veel proberen. Ik kreeg telkens errors in de console, en kon de oplossing maar niet vinden.
+
 # Installation
 **Clone the repository:**<br>
 `https://github.com/HappyPantss/avert-the-crisis.git`
